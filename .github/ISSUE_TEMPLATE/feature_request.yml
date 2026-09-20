@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest an improvement to AnySTT
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem or gap?
+      description: What can't you do today, or what's awkward?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like AnySTT to do?
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language this is about (if any)
+      placeholder: Hebrew (he-IL)
+    validations:
+      required: false

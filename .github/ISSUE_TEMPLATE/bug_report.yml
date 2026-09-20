@@ -1,0 +1,64 @@
+name: Bug report
+description: Something in AnySTT isn't working
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve AnySTT. The more of this you fill in, the faster it gets fixed.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong?
+      placeholder: I pressed Win + H and dictated in Hebrew, but nothing was typed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: false
+  - type: dropdown
+    id: recognizer
+    attributes:
+      label: Recognizer
+      description: Which one is picked in Win + H's gear menu?
+      options:
+        - Copilot (default)
+        - Google Speech Recognition
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Keyboard language
+      description: The language you were dictating in (the active keyboard).
+      placeholder: Hebrew (he-IL)
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: Settings → System → About → OS build.
+      placeholder: Windows 11 24H2 (26100.xxxx)
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: AnySTT version
+      placeholder: 1.0.0
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: false
